@@ -2,6 +2,9 @@
 ### Documentation
 https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html 
 
+#### Support Material
+- Xcomms https://airflow.apache.org/docs/apache-airflow/stable/concepts/xcoms.html 
+
 ### Video Tutorial
 https://www.youtube.com/watch?v=K9AnJ9_ZAXE&t=471s 
 
@@ -14,7 +17,7 @@ https://www.youtube.com/watch?v=K9AnJ9_ZAXE&t=471s
 `docker-compose --version`
 
 - initialize docker base database (which is by defualt is sqlite)
-`docker-compose -u airflow-init`
+`docker-compose up airflow-init`
 The output of this file should be `exited with code 0` which means database is initialised. 
 - run airflow in docker 
 `docker-compose up -d` 
@@ -31,3 +34,8 @@ and then change this from `true` to `false` in docker-compose.yml file
 - re initiate docker db:
     - `docker-compose -u airflow-init`
     - `docker-compose up -d`  
+
+### Create Postgres Connection 
+- add `ports: -5432:5432` to the `.yml` file 
+- re run the docker:
+`docker-compose up -d --no-deps --build postgres` 
