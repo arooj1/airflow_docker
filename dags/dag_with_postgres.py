@@ -10,7 +10,7 @@ default_args = {
 }
 
 with DAG(
-    dag_id= "dag_with_postgres_operator",
+    dag_id= "test_dag_with_postgres_operator",
     default_args = default_args,
     start_date = datetime(2022,11,22),
     schedule_interval='@daily'
@@ -29,4 +29,4 @@ with DAG(
 
     )
 
-    task1
+data = task1

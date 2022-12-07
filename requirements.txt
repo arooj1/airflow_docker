@@ -1,0 +1,17 @@
+numpy
+pandas
+python-dotenv
+pendulum
+elasticsearch
+
+# databases
+psycopg2==2.9.3
+pyodbc
+teradatasql
+
+# preprocessing
+Unidecode
+ftfy
+sparse-dot-topn
+
+

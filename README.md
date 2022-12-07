@@ -16,6 +16,7 @@ https://www.youtube.com/watch?v=K9AnJ9_ZAXE&t=471s
 `docker --version`
 `docker-compose --version`
 
+- `SET AIRFLOW_UID=50000`
 - initialize docker base database (which is by defualt is sqlite)
 `docker-compose up airflow-init`
 The output of this file should be `exited with code 0` which means database is initialised. 
@@ -32,7 +33,7 @@ and then change this from `true` to `false` in docker-compose.yml file
 `AIRFLOW__CORE__LOAD_EXAMPLES: 'false'`
 
 - re initiate docker db:
-    - `docker-compose -u airflow-init`
+    - `docker-compose up airflow-init`
     - `docker-compose up -d`  
 
 ### Create Postgres Connection 
